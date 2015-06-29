@@ -22,12 +22,18 @@ class ofApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
     
+        void playScene0();
+        void playScene1();
+        void playScene2();
+        void playScene3();
+    
         ofSoundPlayer aviPlayer;
         ofSoundPlayer sofyPlayer;
         ofSoundPlayer danPlayer;
         ofSoundPlayer normPlayer;
     
         int sceneTimes[4] = {0, 1500, 3000, 4500};
-        std::map<std::string,bool> scenesMap;
+        std::map<int,bool> scenesMap;
+        int iterator;
 		
 };
